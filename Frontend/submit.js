@@ -1,13 +1,23 @@
 document.getElementById('submitButton').addEventListener('click', async () => {
   const ssn = document.getElementById('ssnInputControl').value;
   const refundAmount = document.getElementById('refundAmountInput').value;
+  
   //Ensure SSN is a valid number
-  if(!ssn){
-    alert('Please enter a valid SSN');
-  }else{
-    console.log("ssn is found")
+  function isSSNValid(ssn) {
+    const ssnRegex = /^\d{3}-\d{2}-\d{4}$/;
+    return ssnRegex.test(ssn);
   }
 
+    if (!ssn) {
+      ssnError.textContent = "SSN is required.";
+      return;
+    }
+
+    if (!isSSNValid(ssn)) {
+      ssnError.textContent = "Invalid SSN format. Use XXX-XX-XXXX.";
+      return;
+    }
+    
   if(!refundAmount){
     alert('Please enter a valid refund amount');
   }else{
@@ -39,6 +49,7 @@ document.getElementById('submitButton').addEventListener('click', async () => {
     }
   } catch (error) {
     console.error(error);
-    alert('Network error.');
-  }
-});
+    alert('Network error.')
+    }
+
+  });

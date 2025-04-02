@@ -171,7 +171,7 @@
                 <form id="ssnForm">
                     <span class="SharedSecrets_verticalMargin4__adgTo">
                       <div class="inLineSsnInput">
-                        <input aria-label="Social Security Number, Required" id="ssnInputControl" name="ssnInput" type="text" maxlength="11" class="input-text null SharedSecrets_width84__Gp+I0" placeholder="input SSN" autocomplete="off" autocorrect="off" aria-required="false" inputmode="numeric" value="">
+                        <input aria-label="Social Security Number, Required" id="ssnInputControl" name="ssnInput" type="text" maxlength="11" class="input-text null SharedSecrets_width84__Gp+I0" pattern="^\d{3}-\d{2}-\d{4}$" placeholder="XXX-XX-XXXX" autocomplete="off" autocorrect="off" aria-required="false" inputmode="numeric" value="" required>
                         <p class="input-error-message" aria-live="polite"></p>
                       </div>
                     </span>
@@ -204,7 +204,7 @@
                             </label>
                         </div>
                         <div class="radio-button">
-                            <input tabindex="0" type="radio" class="radio-button__input" data-testid="2022" id="2022" name="taxYearInput2" aria-required="false" aria-checked="false" value="2022">
+                            <input tabindex="0" type="radio" class="radio-button__input" data-testid="2022" id="2022" name="taxYearInput2" aria-required="false" aria-checked="false" value="2022" required>
                             <label class="input-label " for="2022">
                                 2022
                             </label>
@@ -314,7 +314,7 @@
         <form id="refundForm">
             <div class="SharedSecrets_verticalMargin8__bQ7Qh">
               <div>
-                <input aria-label="Refund Amount, Required" id="refundAmountInput" name="refundAmountInput" type="number" class="input-text null" placeholder="$" autocomplete="off" autocorrect="off" aria-required="false" inputmode="numeric">
+                <input aria-label="Refund Amount, Required" id="refundAmountInput" name="refundAmountInput" type="number" class="input-text null" placeholder="$" autocomplete="off" autocorrect="off" aria-required="false" inputmode="numeric" required>
                 <p class="input-error-message" aria-live="polite"></p>
               </div>
             </div>
