@@ -7,16 +7,18 @@ const Submission = require('./models/submission');
 const app = express();
 const port = 3000;
 
+// Replace 'yourDatabase' with your actual DB name
+mongoose.connect('mongodb://localhost:27017/yourDatabase', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+  .then(() => console.log('MongoDB connected'))
+  .catch((err) => console.log('Error connecting to MongoDB:', err));
+
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
-// MongoDB Connection
-mongoose.connect('mongodb://localhost:27017/ssnDb', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
 
 // Store submission
 app.post('/submit', async (req, res) => {
