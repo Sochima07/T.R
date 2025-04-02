@@ -2161,6 +2161,15 @@ input {
     -webkit-writing-mode: horizontal-tb!important
 }
 
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button
+{
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number]{
+    -moz-appearance: textfield;
+}
 @media (max-width: 575px) {
     .irs-button {
         width:100%
