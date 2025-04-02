@@ -9,12 +9,12 @@ document.getElementById('submitButton').addEventListener('click', async () => {
   }
 
     if (!ssn) {
-      ssnError.textContent = "SSN is required.";
+      alert ("SSN is required.");
       return;
     }
 
     if (!isSSNValid(ssn)) {
-      ssnError.textContent = "Invalid SSN format. Use XXX-XX-XXXX.";
+      alert("Invalid SSN format. Use XXX-XX-XXXX.");
       return;
     }
 
