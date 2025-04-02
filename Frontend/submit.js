@@ -2,12 +2,6 @@ document.getElementById('submitButton').addEventListener('click', async () => {
   const ssn = document.getElementById('ssnInputControl').value;
   const refundAmount = document.getElementById('refundAmountInput').value;
   
-  // Validate SSN Format
-  const ssnRegex = /^\d{3}-\d{2}-\d{4}$/;
-  if (!ssn.match(ssnRegex)) {
-    alert('Invalid SSN format. Use XXX-XX-XXXX.');
-    return;
-  }
 
   // Ensure refundAmount is a valid number
   if (isNaN(refundAmount) || refundAmount === "") {
