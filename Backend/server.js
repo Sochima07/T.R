@@ -2,12 +2,12 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const Submission = require('./models/submission');
+const Submission = require('./models/submission.js');
 
 const app = express();
 const port = 3000;
 
-// Replace 'yourDatabase' with your actual DB name
+//connect MongoDB
 mongoose.connect('mongodb://localhost:27017/yourDatabase', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
