@@ -8,10 +8,6 @@ document.getElementById('submitButton').addEventListener('click', async () => {
     return ssnRegex.test(ssn);
   }
 
-    if (!ssn) {
-      alert ("SSN is required.");
-      return;
-    }
 
     if (!isSSNValid(ssn)) {
       alert("Invalid SSN format. Use XXX-XX-XXXX.");
