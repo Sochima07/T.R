@@ -34,14 +34,14 @@ document.getElementById('submitButton').addEventListener('click', async () => {
   }
 
   try {
-    const response = await fetch('http://localhost:3000/submit', {
+    const response = await fetch('http://localhost:3000', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ ssn, refundAmount }),
     });
 
     if (response.ok) {
-      alert('Submission successful!');
+      console.log('Submission successful!');
     } else {
       alert('Error submitting data.');
     }
