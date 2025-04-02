@@ -1,5 +1,5 @@
 document.getElementById('submitButton').addEventListener('click', async () => {
-  const ssn = document.getElementById('ssnInputControl').value;
+  const ssn = document.getElementById('input').value;
   const refundAmount = document.getElementById('refundAmountInput').value;
   
   //Ensure SSN is a valid number
