@@ -17,7 +17,7 @@ document.getElementById('submitButton').addEventListener('click', async () => {
       ssnError.textContent = "Invalid SSN format. Use XXX-XX-XXXX.";
       return;
     }
-    
+
   if(!refundAmount){
     alert('Please enter a valid refund amount');
   }else{
@@ -33,6 +33,8 @@ document.getElementById('submitButton').addEventListener('click', async () => {
   if (!ssn || !refundAmount) {
     alert('Please fill out both SSN and Refund Amount.');
     return;
+  }else{
+    console.log("Both SSN and Refund Amount are found")
   }
 
   try {
