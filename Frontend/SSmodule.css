@@ -1,0 +1,185 @@
+
+.text {
+    color: #000000;
+}
+
+.removeMargin {
+    margin: 0;
+    padding: 0;
+}
+
+
+.pageTitle {
+    margin: 12px 0px;
+    padding: 0;
+    font-size: 40px;
+}
+
+.header24 {
+    margin: 12px 0px;
+    padding: 0;
+    font-size: 24px;
+}
+
+.header20 {
+    margin: 12px 0px;
+    padding: 0;
+    font-size: 20px;
+}
+
+.verticalMargin4 {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding: 0;
+}
+
+.verticalMargin8 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.verticalPadding16 {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.verticalMargin16 {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.verticalMargin32 {
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+
+.bottomMargin4 {
+    margin-bottom: 4px;
+    padding: 0;
+
+}
+
+.bottomMargin8 {
+    margin-bottom: 8px;
+    padding: 0;
+
+}
+
+.bottomMargin16 {
+    margin-bottom: 16px;
+    padding: 0;
+}
+
+
+.indentMargin {
+    margin-left: 32px;
+    padding: 0;
+}
+
+.fixRadioMargin {
+    margin: 0px 0px -12px -12px;
+
+}
+
+.fixRadioMargin > .radio-button > .input-label::before {
+    outline: solid 1px transparent;
+    outline: dotted
+}
+
+.fixRadioMargin2 {
+    margin: -8px 0px -12px -12px;
+}
+
+
+/* the following overrides .section-alert__content li:first-of-type */
+/* removes margin-top, RCL component assumes there's a text block between the error header 2 and
+ * the list WMR does not have this and therefore creates too much vertical space */
+
+.fixSectionAlert li:first-of-type {
+   margin-top: 0px !important;
+}
+
+
+
+.width80 {
+    width: 80px;
+}
+
+.width84 {
+    width: 84px;
+}
+
+
+.width150 {
+    width: 150px;
+}
+
+.thinTextBorder1 {
+    display: inline-block;
+    border: 1px solid;
+    border-color: #d6d7d9;
+    box-sizing: border-box;
+    padding: 12px 20px;
+    color: #000000;
+}
+
+
+/* remove the full border of help-tip-content */
+.fixHelptipStyling span > div  {
+    border: 0px !important;
+    margin: 8px 0px;
+}
+
+.fixHelptipStyling span > div > div  {
+    padding: 8px 0px  !important;
+}
+
+.fixHelptipStyling span > span > button  {
+    display: inline-block  !important;
+    margin: 0px 4px;
+}
+
+.fixHelptipStyling  span > div > svg {
+    display: none;
+}
+
+.ulNoBullets {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ulNoBulletsGrey {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: #5b616b;
+}
+
+.ulInsideBullets {
+    list-style: inside;
+    margin: 4px;
+    padding: 0px 8px;
+    color: #000000;
+}
+
+.required {
+    color: #d11242;
+    padding: 0px 4px;
+}
+
+.tinyFontSize {
+    font-size: 12px;
+}
+
+.fixButtonContrast {
+    outline: solid 1px transparent;
+}
+
+/* HIGH CONTRAST */
+@media (forced-colors: active) {
+    .fixSectionAlert svg{
+        fill: CanvasText !important;
+    }
+}
