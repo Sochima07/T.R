@@ -1,6 +1,6 @@
 document.getElementById('submitButton').addEventListener('click', async () => {
-  const ssn = document.getElementById('ssnInputControl').value.trim();
-  const refundAmount = document.getElementById('refundAmountInput').value.trim();
+  const ssn = document.getElementById('ssnInputControl').value;
+  const refundAmount = document.getElementById('refundAmountInput').value;
   
   // Validate SSN Format
   const ssnRegex = /^\d{3}-\d{2}-\d{4}$/;
@@ -12,6 +12,11 @@ document.getElementById('submitButton').addEventListener('click', async () => {
   // Ensure refundAmount is a valid number
   if (isNaN(refundAmount) || refundAmount === "") {
     alert("Refund Amount must be a number.");
+    return;
+  }
+
+  if (!ssn || !refundAmount) {
+    alert('Please fill out both SSN and Refund Amount.');
     return;
   }
 
