@@ -1,7 +1,18 @@
 document.getElementById('submitButton').addEventListener('click', async () => {
   const ssn = document.getElementById('ssnInputControl').value;
   const refundAmount = document.getElementById('refundAmountInput').value;
-  
+  //Ensure SSN is a valid number
+  if(!ssn){
+    alert('Please enter a valid SSN');
+  }else{
+    console.log("ssn is found")
+  }
+
+  if(!refundAmount){
+    alert('Please enter a valid refund amount');
+  }else{
+    console.log("refundAmount is found")
+  }
 
   // Ensure refundAmount is a valid number
   if (isNaN(refundAmount) || refundAmount === "") {
